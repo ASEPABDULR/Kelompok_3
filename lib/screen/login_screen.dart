@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newspub/screen/home_screen.dart';
 import 'package:newspub/screen/register_screen.dart';
 
 import '../apiservice.dart';
@@ -119,21 +120,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     SizedBox(height: 16),
-                    // Forgot password
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Forgot Password?",
-                          style: GoogleFonts.beVietnamPro(
-                            color: Color(0xFF197FE5),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 16),
                     // Login Button
                     ElevatedButton(
                       // Validasi username dan password
@@ -203,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           TextSpan(
-                            text: "Sign Up",
+                            text: "Continue as a guest",
                             style: GoogleFonts.beVietnamPro(
                               color: Color(0xFF197FE5),
                               fontWeight: FontWeight.w500,
@@ -214,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => RegisterScreen(),
+                                        builder: (context) => NewsHomeScreen(),
                                       ),
                                     );
                                   },
